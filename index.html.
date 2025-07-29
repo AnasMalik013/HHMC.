@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HHMC College Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    h1 { text-align: center; font-size: 2rem; margin-bottom: 20px; }
+    .batch-section { margin-top: 30px; }
+    .batch-section h2 { font-size: 1.5rem; margin-bottom: 10px; }
+    .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  </style>
+</head>
+<body>
+  <h1>HHMC College Portal</h1>
+
+  <div class="batch-section">
+    <h2>First Year</h2>
+    <div class="card">Assignments</div>
+    <div class="card">Workbook</div>
+    <div class="card">Homework</div>
+    <div class="card">Tests</div>
+    <div class="card">Practical Classes</div>
+    <div class="card">Attendance</div>
+  </div>
+
+  <div class="batch-section">
+    <h2>Second Year</h2>
+    <div class="card">Assignments</div>
+    <div class="card">Workbook</div>
+    <div class="card">Homework</div>
+    <div class="card">Tests</div>
+    <div class="card">Practical Classes</div>
+    <div class="card">Attendance</div>
+  </div>
+
+  <div class="batch-section">
+    <h2>Third Year</h2>
+    <div class="card">Assignments</div>
+    <div class="card">Workbook</div>
+    <div class="card">Homework</div>
+    <div class="card">Tests</div>
+    <div class="card">Practical Classes</div>
+    <div class="card">Attendance</div>
+  </div>
+</body>
+</html>
