@@ -2,111 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HHMC - College Portal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>HHMC College Portal</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: #f0f0f0;
     }
     header {
-      background: #4B0082;
+      background: #4b0082;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background: #eee;
+      padding: 10px;
     }
-    .container {
+    nav button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      display: none;
       padding: 20px;
     }
-    .batch {
-      margin-bottom: 30px;
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .active {
+      display: block;
     }
-    .batch h2 {
-      color: #4B0082;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-    li:last-child {
-      border-bottom: none;
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 5px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background: #4B0082;
+      padding: 15px;
+      background: #4b0082;
       color: white;
-      margin-top: 40px;
-    }
-    @media (max-width: 600px) {
-      header, .container, footer {
-        padding: 15px;
-      }
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>HHMC</h1>
-    <p>College Website for uploading student work and announcements</p>
-  </header>
 
-  <div class="container">
+<header>
+  <h1>HHMC College Portal</h1>
+  <p>Faculty and CR Upload Portal</p>
+</header>
 
-    <div class="batch">
-      <h2>First Year</h2>
-      <ul>
-        <li>📚 Assignments</li>
-        <li>📝 Workbook</li>
-        <li>📄 Homework</li>
-        <li>📊 Test Updates</li>
-        <li>🔬 Practical Class Updates</li>
-        <li>📆 Attendance</li>
-      </ul>
-    </div>
+<nav>
+  <button onclick="showSection('first')">First Year</button>
+  <button onclick="showSection('second')">Second Year</button>
+  <button onclick="showSection('third')">Third Year</button>
+</nav>
 
-    <div class="batch">
-      <h2>Second Year</h2>
-      <ul>
-        <li>📚 Assignments</li>
-        <li>📝 Workbook</li>
-        <li>📄 Homework</li>
-        <li>📊 Test Updates</li>
-        <li>🔬 Practical Class Updates</li>
-        <li>📆 Attendance</li>
-      </ul>
-    </div>
+<main>
+  <section id="first" class="active">
+    <h2>📘 First Year – Assignments</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1iN_A35-qiVRM8S0DFj2TXtDtncCi4Jj9#grid"></iframe>
+  </section>
 
-    <div class="batch">
-      <h2>Third Year</h2>
-      <ul>
-        <li>📚 Assignments</li>
-        <li>📝 Workbook</li>
-        <li>📄 Homework</li>
-        <li>📊 Test Updates</li>
-        <li>🔬 Practical Class Updates</li>
-        <li>📆 Attendance</li>
-      </ul>
-    </div>
+  <section id="second">
+    <h2>📙 Second Year – Assignments</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1ymFY15BQeyuDlDf4a46mVhfhn7DUZmRG#grid"></iframe>
+  </section>
 
-  </div>
+  <section id="third">
+    <h2>📗 Third Year – Assignments</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1fTgvKcadWhyN1tMno8wupy9DwTy3T2rA#grid"></iframe>
+  </section>
+</main>
 
-  <footer>
-    © 2025 HHMC College. All rights reserved.
-  </footer>
+<footer>
+  © 2025 HHMC College | Developed for Student Work Upload Access
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
+
 </body>
 </html>
